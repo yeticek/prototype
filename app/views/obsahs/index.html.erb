@@ -1,0 +1,46 @@
+<center>
+  <nav class="navbar navbar-default" role="navigation">
+    <strong><%= link_to 'Index', root_path %></strong>
+    <strong><%= link_to 'Vzdelavaci Obsah', obsahs_path %></strong>
+    <strong><%= link_to 'Studijne odbory', odbors_path %></strong>
+    <strong><%= link_to 'Profesijne odbory', profesia_path %></strong>
+    <right><strong><%= link_to 'Login/Log Out', root_path %></strong></right>
+    <right><strong><%= link_to 'Registracia', root_path %></strong></right>
+  </nav>
+</center>
+
+<%= link_to 'New Obsah', new_obsah_path %>
+
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th >  Pridal  </th>
+    <th >  Profesie  </th>
+    <th>  Studijne odbory  </th>
+    <th>  Nazov  </th>
+    <th>  Obsah  </th>
+    <th colspan="3" rowspan="3" ></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @obsahs.each do |obsah| %>
+      <tr>
+        <td><%= obsah.pouzivatel %></td>
+        <td><%= obsah.priradene_profesie %></td>
+        <td><%= obsah.priradene_obory %></td>
+        <td><%= obsah.nazov_obsahu %></td>
+        <td><%= obsah.vzdelavaci_obsah %></td>
+        <td>
+          <button type="submit" class="btn btn-info btn-block"><%= link_to 'Show', obsah %></button>
+          <button type="submit" class="btn btn-default btn-block"><%= link_to 'Edit', edit_obsah_path(obsah) %></button>
+          <button type="submit" class="btn btn-warning btn-block"><%= link_to 'Destroy', obsah, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

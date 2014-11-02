@@ -1,0 +1,27 @@
+<h1>Listing pouzivatels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nick</th>
+      <th>Heslo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pouzivatels.each do |pouzivatel| %>
+      <tr>
+        <td><%= pouzivatel.nick %></td>
+        <td><%= pouzivatel.heslo %></td>
+        <td><%= link_to 'Show', pouzivatel %></td>
+        <td><%= link_to 'Edit', edit_pouzivatel_path(pouzivatel) %></td>
+        <td><%= link_to 'Destroy', pouzivatel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pouzivatel', new_pouzivatel_path %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nick: MyString
+  heslo: MyString
+
+two:
+  nick: MyString
+  heslo: MyString

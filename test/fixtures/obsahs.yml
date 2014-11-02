@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pouzivatel: MyString
+  priradene_profesie: MyString
+  priradene_obory: MyString
+  nazov_obsahu: MyString
+  vzdelavaci_obsah: MyText
+
+two:
+  pouzivatel: MyString
+  priradene_profesie: MyString
+  priradene_obory: MyString
+  nazov_obsahu: MyString
+  vzdelavaci_obsah: MyText

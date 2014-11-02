@@ -1,0 +1,25 @@
+<%= form_for(@odbor) do |f| %>
+  <% if @odbor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@odbor.errors.count, "error") %> prohibited this odbor from being saved:</h2>
+
+      <ul>
+      <% @odbor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cislo %><br>
+    <%= f.number_field :cislo %>
+  </div>
+  <div class="field">
+    <%= f.label :nazov %><br>
+    <%= f.text_field :nazov %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

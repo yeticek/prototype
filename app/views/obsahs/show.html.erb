@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pouzivatel:</strong>
+  <%= @obsah.pouzivatel %>
+</p>
+
+<p>
+  <strong>Priradene profesie:</strong>
+  <%= @obsah.priradene_profesie %>
+</p>
+
+<p>
+  <strong>Priradene obory:</strong>
+  <%= @obsah.priradene_obory %>
+</p>
+
+<p>
+  <strong>Nazov obsahu:</strong>
+  <%= @obsah.nazov_obsahu %>
+</p>
+
+<p>
+  <strong>Vzdelavaci obsah:</strong>
+  <%= @obsah.vzdelavaci_obsah %>
+</p>
+
+<%= link_to 'Edit', edit_obsah_path(@obsah) %> |
+<%= link_to 'Back', obsahs_path %>

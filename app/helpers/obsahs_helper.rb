@@ -1,0 +1,2 @@
+module ObsahsHelper
+end

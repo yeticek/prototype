@@ -1,0 +1,25 @@
+<%= form_for(@pouzivatel) do |f| %>
+  <% if @pouzivatel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pouzivatel.errors.count, "error") %> prohibited this pouzivatel from being saved:</h2>
+
+      <ul>
+      <% @pouzivatel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nick %><br>
+    <%= f.text_field :nick %>
+  </div>
+  <div class="field">
+    <%= f.label :heslo %><br>
+    <%= f.text_field :heslo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+<%= form_for(@profesium) do |f| %>
+  <% if @profesium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profesium.errors.count, "error") %> prohibited this profesium from being saved:</h2>
+
+      <ul>
+      <% @profesium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :profesia_cislo %><br>
+    <%= f.number_field :profesia_cislo %>
+  </div>
+  <div class="field">
+    <%= f.label :nazov_profesie %><br>
+    <%= f.text_field :nazov_profesie %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

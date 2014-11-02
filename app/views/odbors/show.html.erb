@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cislo:</strong>
+  <%= @odbor.cislo %>
+</p>
+
+<p>
+  <strong>Nazov:</strong>
+  <%= @odbor.nazov %>
+</p>
+
+<%= link_to 'Edit', edit_odbor_path(@odbor) %> |
+<%= link_to 'Back', odbors_path %>
