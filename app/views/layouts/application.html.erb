@@ -7,8 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="navbar navbar-default " role="navigation">
 
-<%= yield %>
+  <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+      <button type="button" class="btn btn-default navbar-btn" ><%= link_to 'Domov', root_path, :class => 'navbar-link' %> </button>
+      <button type="button" class="btn btn-default navbar-btn" ><%= link_to 'Vzdelavaci Obsah', obsahs_path, :class => 'navbar-link'  %></button>
+      <button type="button" class="btn btn-default navbar-btn" ><%= link_to 'Studijne odbory', odbors_path, :class => 'navbar-link' %></button>
+      <button type="button" class="btn btn-default navbar-btn" > <%= link_to link_to 'Profesijne odbory', profesia_path, :class => 'navbar-link'  %></button>
+      <button type="button" class="btn btn-default navbar-btn" ><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></button>
+      <button type="button" class="btn btn-default navbar-btn" ><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></button>
+  <% else %>
+      <button type="button" class="btn btn-default navbar-btn" ><%= link_to 'Domov', root_path, :class => 'navbar-link' %> </button>
+      <button type="button" class="btn btn-default navbar-btn" ><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></button>
+      <button type="button" class="btn btn-default navbar-btn" ><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></button>
+  <% end %>
+
+  </div>
+  </nav>
+
+
+<% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
+
+
+<center><%= yield %></center>
 
 </body>
 </html>

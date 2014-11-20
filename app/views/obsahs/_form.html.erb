@@ -10,18 +10,18 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :pouzivatel %><br>
-    <%= f.text_field :pouzivatel %>
-  </div>
-  <div class="field">
-    <%= f.label :priradene_profesie %><br>
-    <%= f.text_field :priradene_profesie %>
+    <%= f.hidden_field :pouzivatel, :value => current_user.email %>
+   <div class="field">
+     <%= f.label :priradene_profesie %><br>
+     <%= f.text_field :priradene_profesie %>
+     <!--<% @prof = Profesium.all.group(:id) %>-->
+     <!--<%= f.select :priradene_profesie, @prof.map{ |c| [c.nazov_profesie, c.nazov_profesie] }, :include_blank => true, :multiple => true %><br> -->
   </div>
   <div class="field">
     <%= f.label :priradene_obory %><br>
     <%= f.text_field :priradene_obory %>
+    <!--<% @odbor = Odbor.all %>-->
+    <!--<%= f.select :priradene_obory, @odbor.map{ |c| [c.nazov, c.nazov] }, :include_blank => true, :multiple => true %><br> -->
   </div>
   <div class="field">
     <%= f.label :nazov_obsahu %><br>

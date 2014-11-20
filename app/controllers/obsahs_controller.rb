@@ -25,7 +25,6 @@ class ObsahsController < ApplicationController
   # POST /obsahs.json
   def create
     @obsah = Obsah.new(obsah_params)
-
     respond_to do |format|
       if @obsah.save
         format.html { redirect_to @obsah, notice: 'Obsah was successfully created.' }

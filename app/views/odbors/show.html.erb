@@ -9,6 +9,32 @@
   <strong>Nazov:</strong>
   <%= @odbor.nazov %>
 </p>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th >  Pridal  </th>
+    <th >  Profesie  </th>
+    <th>  Studijne odbory  </th>
+    <th>  Nazov  </th>
+    <th>  Obsah  </th>
+    <th colspan="3" rowspan="3" ></th>
+  </tr>
+  </thead>
+  <tbody>
+<% @obsah = Obsah.where('priradene_obory LIKE ?', "%#{@odbor.cislo}%") %>
+<% @obsah.each do |o| %>
+
+          <tr>
+            <td><%= o.pouzivatel %></td>
+            <td><%= o.priradene_profesie %></td>
+            <td><%= o.priradene_obory %></td>
+            <td><%= o.nazov_obsahu %></td>
+            <td><%= o.vzdelavaci_obsah %></td>
+          </tr>
+    <% end %>
+
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_odbor_path(@odbor) %> |
 <%= link_to 'Back', odbors_path %>

@@ -1,13 +1,3 @@
-<center>
-  <nav class="navbar navbar-default" role="navigation">
-    <strong><%= link_to 'Index', root_path %></strong>
-    <strong><%= link_to 'Vzdelavaci Obsah', obsahs_path %></strong>
-    <strong><%= link_to 'Studijne odbory', odbors_path %></strong>
-    <strong><%= link_to 'Profesijne odbory', profesia_path %></strong>
-    <right><strong><%= link_to 'Login/Log Out', root_path %></strong></right>
-    <right><strong><%= link_to 'Registracia', root_path %></strong></right>
-  </nav>
-</center>
 
 <%= link_to 'New Odbor', new_odbor_path %>
 
@@ -25,10 +15,10 @@
       <tr>
         <td><%= odbor.cislo %></td>
         <td><%= odbor.nazov %></td>
-        <td>
-          <button type="submit" class="btn btn-info btn-block"><%= link_to 'Show', odbor %></button>
-          <button type="submit" class="btn btn-default btn-block"><%= link_to 'Edit', edit_odbor_path(odbor) %></button>
-          <button type="submit" class="btn btn-warning btn-block"><%= link_to 'Destroy', odbor, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        <td width="20%">
+          <button type="submit" class="btn btn-info "><%= link_to 'Show', odbor %></button>
+          <button type="submit" class="btn btn-default"><%= link_to 'Edit', edit_odbor_path(odbor) %></button>
+          <button type="submit" class="btn btn-warning "><%= link_to 'Destroy', odbor, method: :delete, data: { confirm: 'Are you sure?' } %></button>
         </td>
       </tr>
   <% end %>

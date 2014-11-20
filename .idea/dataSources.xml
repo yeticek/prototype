@@ -4,13 +4,25 @@
     <data-source source="LOCAL" name="Rails prototyp: development" uuid="0dba0b17-0291-4f8d-9535-edfba8acb4f0">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:D:\prototyp\prototyp\db\development.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:D:\RoR\prototyp\db\development.sqlite3</jdbc-url>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails prototyp: test" uuid="3db7f16e-f10a-40bc-96cc-52177bd1fc26">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:D:\prototyp\prototyp\db\test.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:D:\RoR\prototyp\db\test.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails diplomka: development" uuid="df56eedb-a1c5-409e-9aca-ae1de8b657e0">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:D:\RoR\diplomka\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails nikeAPP: development" uuid="9a146b65-a2e6-4711-bf3b-15e639250d5c">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:D:\RoR\nikeAPP\db\development.sqlite3</jdbc-url>
       <libraries />
     </data-source>
   </component>
